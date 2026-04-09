@@ -112,8 +112,6 @@ margin-top:20px;
 </div>
 
 <div id="celebration">
-Thank you for forgiving me 💖✨  
-I Won't do same mistake again🌹
 </div>
 
 </div>
@@ -122,9 +120,11 @@ I Won't do same mistake again🌹
 
 /* typing animation */
 
-const text="I know I made a mistake and I truly regret it. You mean the world to me. Please forgive me, LOVE YOU Machaa ❤️";
+const text="I know I made a mistake (Ida yalla Halada Niddeyinda) and I truly regret it. You mean the world to me. Please forgive me, LOVE YOU Machaa ❤️";
+const sorry="Thank you for forgiving me 💖✨,  I Won't do same mistake again🌹";
 
 let i=0;
+let j=0;
 
 function type(){
 if(i<text.length){
@@ -155,8 +155,15 @@ setInterval(heart,400);
 /* forgive button */
 
 function forgive(){
-document.getElementById("buttons").style.display="none";
-document.getElementById("celebration").style.display="block";
+//document.getElementById("buttons").style.display="none";
+//document.getElementById("celebration").style.display="block";
+  if(j<sorry.length){
+document.getElementById("celebration").innerHTML+=sorry.charAt(i);
+j++;
+setTimeout(forgive,40);
+
+}
+
 }
 
 /* funny no button */
